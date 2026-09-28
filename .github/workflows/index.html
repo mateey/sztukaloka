@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sztuka Loka – fryzjer w Gdańsku</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--paper:#f6f3ff;--ink:#14103a;--muted:#5d5985;--line:#d3cbf2;--blue:#2233c9;--lilac:#d9cffc;--sun:#ffcf4a;--sun-ink:#14103a;--tile:#e6e0fb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0e0b2a;--ink:#efeaff;--muted:#a9a3d1;--line:#2c2757;--tile:#1a1640}}
+:root[data-theme="dark"]{--paper:#0e0b2a;--ink:#efeaff;--muted:#a9a3d1;--line:#2c2757;--tile:#1a1640}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.05rem/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.btn{display:inline-block;background:var(--sun);color:var(--sun-ink);font-weight:600;padding:13px 24px;border-radius:999px;text-decoration:none}
+.btn:hover{filter:brightness(1.06)}
+.hero{background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-weight:600}
+nav div{display:flex;gap:20px;align-items:center}
+nav a.t{text-decoration:none;display:none}
+@media(min-width:640px){nav a.t{display:inline}}
+.hero-body{padding:56px 0 90px;max-width:640px}
+h1{font-size:clamp(3.4rem,15vw,8.2rem);font-weight:800;line-height:.9}
+.hero p{font-size:1.2rem;max-width:30ch;margin:26px 0 30px;color:var(--lilac)}
+.rate{margin-top:22px;font-size:.95rem;color:var(--lilac)}
+.curl{position:absolute;right:-60px;top:0;height:100%;width:min(70vw,620px);opacity:.9}
+.curl path{fill:none;stroke:var(--lilac);stroke-width:14;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s cubic-bezier(.6,.1,.2,1) .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.curl path{animation:none;stroke-dashoffset:0}}
+section{padding:72px 0}
+h2{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:10px}
+.lead{color:var(--muted);max-width:56ch;margin:0 0 36px}
+.cols{display:grid;gap:44px;grid-template-columns:1fr}
+@media(min-width:820px){.cols{grid-template-columns:1fr 1fr;gap:64px}}
+h3{font-size:1.3rem;font-weight:600;margin:0 0 6px}
+.cols h3:not(:first-child){margin-top:34px}
+.note{color:var(--muted);font-size:.92rem;margin:0 0 10px}
+ul.p{list-style:none;padding:0;margin:0}
+ul.p li{display:flex;align-items:baseline;gap:10px;padding:8px 0}
+ul.p .n small{display:block;color:var(--muted);font-size:.85rem}
+ul.p .d{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-.3em);min-width:12px}
+ul.p b{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;white-space:nowrap}
+.gal{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.gal{grid-template-columns:repeat(3,1fr)}}
+.gal figure{margin:0;aspect-ratio:4/5;background:var(--tile);border-radius:6px 44px 6px 44px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.gal figure:nth-child(even){border-radius:44px 6px 44px 6px;aspect-ratio:1/1}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal svg{width:42%;opacity:.7}
+.gal svg path{fill:none;stroke:var(--blue);stroke-width:9;stroke-linecap:round}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .gal svg path{stroke:var(--lilac)}}
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:18px 34px 18px 0;font:600 1.15rem "Bricolage Grotesque","Instrument Sans",sans-serif;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:1.6rem;transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{margin:0 0 20px;max-width:62ch;color:var(--muted)}
+.contact{background:var(--blue);color:#fff}
+.contact .lead{color:var(--lilac)}
+.contact .cols{align-items:start}
+.contact a:not(.btn){text-underline-offset:4px}
+.contact .btn{margin-top:20px}
+footer{background:var(--blue);color:var(--lilac);padding:0 0 36px;font-size:.9rem}
+</style>
+</head>
+<body>
+<header class="hero">
+<svg class="curl" viewBox="0 0 600 700" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><path pathLength="1" d="M40 660 C40 450 300 490 300 350 C300 200 100 220 115 335 C130 445 310 420 390 310 C470 200 390 85 305 130 C240 165 270 265 355 255 C440 245 525 150 570 30"/></svg>
+<div class="wrap">
+<nav><span>Sztuka Loka</span><div><a class="t" href="#cennik">Cennik</a><a class="t" href="#galeria">Galeria</a><a class="t" href="#faq">FAQ</a><a class="btn" href="https://booksy.com/pl-pl/95604_sztuka-loka_fryzjer_20383_gdansk" target="_blank" rel="noopener">Umów wizytę</a></div></nav>
+<div class="hero-body">
+<h1>Sztuka Loka</h1>
+<p>Strzyżenie, koloryzacja i pielęgnacja. Loki są tu rzeźbą, a Ty wychodzisz z wiedzą, jak je stylizować w domu.</p>
+<a class="btn" href="https://booksy.com/pl-pl/95604_sztuka-loka_fryzjer_20383_gdansk" target="_blank" rel="noopener">Zarezerwuj na Booksy</a>
+<div class="rate">5.0 na Booksy, ponad 630 opinii</div>
+</div>
+</div>
+</header>
+
+<main>
+<section id="cennik"><div class="wrap">
+<h2>Cennik</h2>
+<p class="lead">Wybierz usługę według swojej obecnej długości włosów. Strzyżenie dotyczy Pań.</p>
+<div class="cols">
+<div>
+<h3>Strzyżenie włosów kręconych</h3>
+<p class="note">Konsultacja, dobór fryzury, pielęgnacja ze stylizacją i porady na co dzień.</p>
+<ul class="p">
+<li><span class="n">Krótkie, do ucha<small>1 g 15 min</small></span><i class="d"></i><b>200 zł</b></li>
+<li><span class="n">Średnie, do ramion<small>1 g 15 min</small></span><i class="d"></i><b>250 zł</b></li>
+<li><span class="n">Długie, do łopatek<small>1 g 30 min</small></span><i class="d"></i><b>280 zł</b></li>
+<li><span class="n">Bardzo długie, do pasa<small>1 g 45 min</small></span><i class="d"></i><b>300 zł</b></li>
+</ul>
+<h3>Strzyżenie włosów prostych</h3>
+<ul class="p">
+<li><span class="n">Krótkie<small>1 g</small></span><i class="d"></i><b>200 zł</b></li>
+<li><span class="n">Średnie<small>1 g</small></span><i class="d"></i><b>250 zł</b></li>
+<li><span class="n">Długie<small>1 g 15 min</small></span><i class="d"></i><b>270 zł</b></li>
+</ul>
+</div>
+<div>
+<h3>Koloryzacja</h3>
+<p class="note">Ceny zaawansowanej są minimalne i zależą od nakładu pracy. Przy bardzo długich i gęstych włosach cena może być wyższa.</p>
+<ul class="p">
+<li><span class="n">Klasyczna, jeden kolor<small>bez rozjaśniania, ok. 2 g</small></span><i class="d"></i><b>od 350 zł</b></li>
+<li><span class="n">Klasyczna, odrosty z długością<small>ok. 2 g 15 min</small></span><i class="d"></i><b>380 zł</b></li>
+<li><span class="n">Klasyczna + strzyżenie<small>ok. 2 g 30 min</small></span><i class="d"></i><b>od 440 zł</b></li>
+<li><span class="n">Refleksy, baleyage<small>rozjaśnianie z tonowaniem, ok. 3 g 30 min</small></span><i class="d"></i><b>od 580 zł</b></li>
+<li><span class="n">Zaawansowana + strzyżenie<small>ok. 4 g</small></span><i class="d"></i><b>od 650 zł</b></li>
+</ul>
+<h3>Pielęgnacja Disciplina</h3>
+<ul class="p">
+<li><span class="n">Pielęgnacja + stylizacja<small>2 g 15 min</small></span><i class="d"></i><b>330 zł</b></li>
+<li><span class="n">Pielęgnacja + strzyżenie<small>2 g 45 min</small></span><i class="d"></i><b>480 zł</b></li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<section id="galeria" style="padding-top:0"><div class="wrap">
+<h2>Galeria</h2>
+<p class="lead">Fryzury z salonu.</p>
+<div class="gal" id="gal"></div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+<h2>Zanim napiszesz</h2>
+<p class="lead">Odpowiedzi na pytania, które padają najczęściej. Jeśli tu jest, nie musisz pisać.</p>
+
+<details><summary>Jak się umówić?</summary><p>Rezerwacje przyjmuję przez Booksy, bo tam jest aktualny kalendarz. Wiadomość na Instagramie czy Facebooku nie jest rezerwacją.</p></details>
+<details><summary>Nie widzę wolnych terminów</summary><p>Jeśli w kalendarzu nic nie ma, wszystkie terminy są zajęte. Zajrzyj tam za jakiś czas, bo terminy się zmieniają.</p></details>
+<details><summary>W jakich godzinach pracujesz?</summary><p>Godziny są inne każdego dnia. Jedynym aktualnym źródłem jest kalendarz w Booksy.</p></details>
+<details><summary>Którą długość włosów wybrać w rezerwacji?</summary><p>Tę, z którą przychodzisz na wizytę: do ucha, do ramion, do łopatek albo do pasa. Od długości zależy czas wizyty i cena.</p></details>
+<details><summary>Mam włosy proste. Czy to miejsce dla mnie?</summary><p>Tak, strzyżenie włosów prostych ma osobną pozycję w cenniku.</p></details>
+<details><summary>Ile zapłacę za koloryzację?</summary><p>Ceny w cenniku to kwoty początkowe. Przy koloryzacji zaawansowanej cena jest minimalna i zależy od zużycia produktów i nakładu pracy.</p></details>
+<details><summary>Jak wygląda pierwsza wizyta?</summary><p>Pierwszą wizytę potwierdzam SMS-em 48 godzin wcześniej. Jeśli nie odpowiesz, wizyta zostanie anulowana.</p></details>
+<details><summary>Mogę zarezerwować kilka terminów, żeby wybrać najlepszy?</summary><p>Nie. Proszę o jedną rezerwację naraz, pozostałe zostaną usunięte.</p></details>
+<details><summary>Rezerwuję dla kogoś innego</summary><p>Wpisz w notatce do rezerwacji, dla kogo jest wizyta.</p></details>
+<details><summary>Spóźnię się</summary><p>Napisz SMS. Na wizytę przychodź punktualnie.</p></details>
+<details><summary>Czy mogę przyjść bez rezerwacji lub z osobą towarzyszącą?</summary><p>Wizyty odbywają się tylko po wcześniejszej rezerwacji i bez osób towarzyszących.</p></details>
+<details><summary>Czy jest parking?</summary><p>Tak. W salonie jest też Wi-Fi, a zwierzęta są mile widziane.</p></details>
+</div></section>
+
+<section class="contact" id="kontakt"><div class="wrap">
+<h2>Sztuka Loka</h2>
+<p class="lead">Natalia Chowicka, fryzjer.</p>
+<div class="cols">
+<div><h3>Adres</h3><p>Wajdeloty 26/1<br>80-437 Gdańsk<br><a href="https://www.google.com/maps/search/?api=1&query=Wajdeloty+26+Gda%C5%84sk" target="_blank" rel="noopener">Pokaż na mapie</a></p></div>
+<div><h3>Napisz lub obserwuj</h3><p><a href="https://www.instagram.com/curl_art_/" target="_blank" rel="noopener">Instagram @curl_art_</a><br><a href="https://www.facebook.com/sztuka.loka" target="_blank" rel="noopener">Facebook</a></p>
+<a class="btn" href="https://booksy.com/pl-pl/95604_sztuka-loka_fryzjer_20383_gdansk" target="_blank" rel="noopener">Umów wizytę na Booksy</a></div>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">© Sztuka Loka</div></footer>
+
+<script>
+// Wklej tu zdjęcia jako data: URI albo ścieżki, np. PHOTOS.push({src:"...", alt:"Loki po strzyżeniu"})
+var PHOTOS=[];
+(function(){
+var g=document.getElementById("gal"),html="";
+var curl='<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20 90 C20 60 60 65 60 45 C60 25 30 30 32 48 C34 62 60 58 72 42 C82 28 70 12 58 18"/></svg>';
+var n=PHOTOS.length?PHOTOS.length:6,i;
+for(i=0;i<n;i++){html+=PHOTOS.length?'<figure><img loading="lazy" src="'+PHOTOS[i].src+'" alt="'+(PHOTOS[i].alt||"Fryzura")+'"></figure>':'<figure>'+curl+'</figure>';}
+g.innerHTML=html;
+})();
+</script>
+</body>
+</html>
